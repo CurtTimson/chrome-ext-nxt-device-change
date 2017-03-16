@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/CurtTimson/chrome-ext-nxt-device-change/issues"
   },
-  "homepage": "https://github.com/CurtTimson/chrome-ext-nxt-device-change#readme"
+  "homepage": "https://github.com/CurtTimson/chrome-ext-nxt-device-change#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1"
+  }
 }
