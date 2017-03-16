@@ -35,9 +35,12 @@
 
   });
 
-  var switchDevice = function(deviceToSwitchTo, returnUrl){
-    invokeDeviceSwitch(deviceToSwitchTo, function(){
-        renderStatus(returnUrl);
+  var switchDevice = function(deviceToSwitchTo, url){
+
+    var baseDomain = getBaseDomainFromUrl(url);
+
+
+    invokeDeviceSwitch(baseDomain, deviceToSwitchTo, function(){
         chrome.tabs.getSelected(null, function(tab) {
           var code = 'window.location.reload();';
           chrome.tabs.executeScript(tab.id, {code: code});
@@ -46,9 +49,21 @@
     });
   }
 
-  var invokeDeviceSwitch = function(deviceToSwitchTo, callback){
+  var getBaseDomainFromUrl = function(url){
+    var domain;
+    if (url.indexOf("://") > -1) {
+        domain = url.split('/')[2];
+    }
+    else {
+        domain = url.split('/')[0];
+    }
+    domain = domain.split(':')[0];
+    return domain;
+  }
 
-      var url = deviceToSwitchTo;
+  var invokeDeviceSwitch = function(baseDomain, deviceToSwitchTo, callback){
+
+      var url = "http://" + baseDomain + "/changedevice/" + deviceToSwitchTo;
 
       var x = new XMLHttpRequest();
       x.open('GET', url);
