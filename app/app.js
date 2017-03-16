@@ -50,15 +50,8 @@
   }
 
   var getBaseDomainFromUrl = function(url){
-    var domain;
-    if (url.indexOf("://") > -1) {
-        domain = url.split('/')[2];
-    }
-    else {
-        domain = url.split('/')[0];
-    }
-    domain = domain.split(':')[0];
-    return domain;
+    var domain = (url.indexOf("://") > -1) ? url.split('/')[2] : url.split('/')[0];
+    return domain.split(':')[0];
   }
 
   var invokeDeviceSwitch = function(baseDomain, deviceToSwitchTo, callback){
