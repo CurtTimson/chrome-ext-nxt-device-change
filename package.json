@@ -1,0 +1,19 @@
+{
+  "name": "chrome-ext-nxt-device-change",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CurtTimson/chrome-ext-nxt-device-change.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CurtTimson/chrome-ext-nxt-device-change/issues"
+  },
+  "homepage": "https://github.com/CurtTimson/chrome-ext-nxt-device-change#readme"
+}
