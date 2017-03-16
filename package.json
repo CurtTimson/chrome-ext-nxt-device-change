@@ -19,7 +19,5 @@
   "devDependencies": {
     "gulp": "^3.9.1"
   },
-  "dependencies": {
-    "designmodo-flat-ui": "^2.3.0"
-  }
+  "dependencies": {}
 }
