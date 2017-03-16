@@ -1,15 +1,14 @@
 {
   "manifest_version": 2,
 
-  "name": "Test",
-  "description": "Testing",
+  "name": "Next Device Switcher",
+  "description": "Switch between desktop and mobile views",
   "version": "0.0.0.1",
 
   "browser_action": {
     "default_popup": "index.html"
   },
   "permissions": [
-    "activeTab",
-    "https://ajax.googleapis.com/"
+    "activeTab"
   ]
 }
